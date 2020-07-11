@@ -15,7 +15,7 @@ async function bootstrap() {
     .addTag('tasks')
     .build();
   const document = SwaggerModule.createDocument(app, options);
-  SwaggerModule.setup('api', app, document);
+  SwaggerModule.setup('', app, document);
   /**************************/
 
 

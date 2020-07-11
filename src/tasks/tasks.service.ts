@@ -12,7 +12,7 @@ export class TasksService {
     ) { }
 
     async getTasks(): Promise<Task[]> {
-        return await this.taskModel.find();
+        return await this.taskModel.find({softDeleted:false});
     }
 
     async getTaskById(id: string): Promise<Task> {

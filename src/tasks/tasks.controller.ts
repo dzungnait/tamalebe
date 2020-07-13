@@ -32,8 +32,8 @@ export class TasksController {
     @Patch('/:id/status')
     updateTaskStatus(
         @Param('id') id: string,
-        @Body('status',) status: string) {
-        return this.taskService.updateTaskStatus(id, status.toUpperCase());
+        @Body('status') status: string) {
+        return this.taskService.updateTaskStatus(id, status);
     }
 
     @Delete(':id')
